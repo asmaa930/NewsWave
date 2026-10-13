@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>News Wave</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.index.css">
+
+
+    <script src="js/bootstrap.js" defer></script>
+    <script src="js/jQuery.js" defer></script>
+    <script src="js/functions.js" defer></script>
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+
+    <section>
+        <div class="container py-5">
+
+            <div id="Title" class="text-center  fs-1">
+                <h1 class="main-color">News Wave</h1>
+            </div>
+            
+            <!--! ------------------------------------ -->
+
+            <div id="Filter" class="my-5">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="item">
+                                <div class="mb-4">
+                                    <label for="Category" class="form-label ps-3 text-light fw-medium">Category</label>
+                                    <select class="form-select rounded-pill" id="Category" name="Category">
+                                        <option value="business" selected>Business</option>
+                                        <option value="health">Health</option>
+                                        <option value="science">Science</option>
+                                        <option value="sports">Sports</option>
+                                        <option value="technology">Technology</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="item">
+                                <div class="mb-4">
+                                    <label for="Search" class="form-label ps-3 text-light fw-medium">Search</label>
+                                    <input type="search" name="search" class="form-control rounded-pill" id="Search"
+                                        placeholder="Search...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-filter rounded-pill w-100">Filter</button>
+                </form>
+            </div>
+
+            <!--! ------------------------------------ -->
+
+            <div id="Data">
+                <div class="cards row row-gap-5"></div>
+
+                <nav aria-label="Page navigation" class="navigation mt-5">
+                    <ul class="pagination justify-content-center column-gap-3 column-gap-lg-4 mb-0"></ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!--! ------------------------------------------------------------------------------------------- -->
+
+    <div class="popup py-5" popup-name="lock-page">
+
+        <div class="title text-center">
+            <h2 class="main-color">News Wave</h2>
+        </div>
+
+        <div class="box h-100 text-center d-flex align-items-center justify-content-center">
+            <div>
+                <img src="images/lock-page.gif" class="img-fluid mb-4" alt="No News">
+                <p class="rate-limited text-center">You've reached the request limit. <br class="d-md-none"> Please try
+                    again later.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--! ------------------------------------------------------------------------------------------- -->
+
+    <div class="popup" popup-name="load-news" class="py-5">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="box d-flex align-items-center justify-content-center column-gap-4">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

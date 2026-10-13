@@ -1,0 +1,111 @@
+@media (max-width: 1300px) {
+    #Filter form {
+        width: 90%;
+        margin: auto;
+    }
+
+    /*! ------------------------------ */
+    #Data .no-news-found img {
+        width: 140px;
+    }
+
+    #Data .navigation .pagination .page-item .page-link {
+        height: 30px;
+    }
+
+    #Data .navigation .pagination .page-item:not(:first-child, :last-child) .page-link {
+        width: 30px;
+    }
+
+    /*! ------------------------------ */
+    #Data .cards .s-card .item {
+        max-width: 250px;
+    }
+
+    #Data .cards .s-card .item .caption .details h5 {
+        font-size: 18px;
+    }
+
+    /*! ------------------------------ */
+    .popup[popup-name="lock-page"] .title h2 {
+        font-size: 35px;
+    }
+
+    .popup[popup-name="lock-page"] .box img {
+        max-width: 100px;
+    }
+
+    .popup[popup-name="lock-page"] .box p {
+        font-size: 16px;
+    }
+}
+
+/*? ------------------------------------------------------------ */
+@media (min-width: 371px) and (max-width: 1300px) {
+
+    /*! ------------------------------ */
+    #Data .no-news-found img {
+        width: 180px;
+    }
+
+    #Data .cards .s-card .item {
+        max-width: 300px;
+    }
+
+    #Data .cards .s-card .item .caption .details h5 {
+        font-size: 20px;
+    }
+
+    /*! ------------------------------ */
+    .popup[popup-name="lock-page"] .title h2 {
+        font-size: 40px;
+    }
+
+    .popup[popup-name="lock-page"] .box img {
+        max-width: 130px;
+    }
+
+    .popup[popup-name="lock-page"] .box p {
+        font-size: 18px;
+    }
+}
+
+/*? ------------------------------------------------------------ */
+@media (min-width: 577px) and (max-width: 1300px) {}
+
+/*? ------------------------------------------------------------ */
+@media (min-width: 769px) and (max-width: 1300px) {
+    #Filter form {
+        width: 100%;
+    }
+
+    /*! ------------------------------ */
+    .popup[popup-name="lock-page"] .title h2 {
+        font-size: 50px;
+    }
+
+    .popup[popup-name="lock-page"] .box img {
+        max-width: 150px;
+    }
+
+    .popup[popup-name="lock-page"] .box p {
+        font-size: 20px;
+    }
+}
+
+/*? ------------------------------------------------------------ */
+@media (min-width: 992px) and (max-width: 1300px) {
+    #Data .no-news-found img {
+        width: 200px;
+    }
+
+    #Data .navigation .pagination .page-item .page-link {
+        height: 40px;
+    }
+
+    #Data .navigation .pagination .page-item:not(:first-child, :last-child) .page-link {
+        width: 40px;
+    }
+}
+
+@media (min-width: 1181px) and (max-width: 1300px) {}

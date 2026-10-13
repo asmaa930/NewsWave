@@ -1,0 +1,40 @@
+:root {
+    --main-color: #27E9B5;
+    --main-color-light: #abc7c7;
+    --main-color-alpha: #27e9b541;
+    --first-bg-color: #051824;
+    --second-bg-color: #162936;
+    --linear-gradient:linear-gradient(145deg, #102632, #051824);
+}
+
+::selection {
+    background: var(--first-bg-color);
+    color: #27E9B5;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--first-bg-color);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+    cursor: grab;
+}
+
+body {
+    background: linear-gradient(145deg,
+            #051824 0%,
+            #0B2530 35%,
+            #102D38 65%,
+            #162936 100%);
+
+    /* fallback */
+    min-height: 100vh;
+    min-height: 100dvh;
+
+}

@@ -1,0 +1,274 @@
+/*! ------------------------------ Title ------------------------------ */
+
+#Title h1 {
+    color: var(--main-color);
+    font-weight: 600;
+
+    text-shadow: 1px 1px 5px #ffffff72;
+}
+
+/*! ------------------------------ Filter ------------------------------ */
+
+#Filter form .form-control,
+#Filter form .form-select {
+    background: transparent;
+    color: var(--main-color-light);
+    border: 1px solid var(--main-color-alpha);
+    border-radius: 12px;
+    padding: 12px 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#Filter form .form-control::placeholder {
+    color: var(--main-color-light);
+}
+
+#Filter form .form-control:focus,
+#Filter form .form-select:focus {
+    box-shadow: 0 0 0 3px var(--main-color-alpha);
+}
+
+select {
+    background-color: var(--first-bg-color);
+    color: #fff;
+    border: 1px solid var(--secondary-surface);
+}
+
+select option {
+    background: var(--second-bg-color);
+    color: #fff;
+    border-radius: 50%;
+}
+
+select option:checked {
+    background: var(--main-color);
+    color: var(--first-bg-color);
+}
+
+#Filter form .btn-filter {
+    background: var(--main-color);
+    color: var(--first-bg-color);
+    border-radius: 12px;
+    /* padding: 8px 28px; */
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+#Filter form .btn-filter {
+    background: var(--linear-gradient);
+    border: 1px solid rgba(39, 233, 181, 0.15);
+    padding-block: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+
+    transition: 0.5s;
+}
+
+#Filter form .btn-filter:hover {
+    letter-spacing: 4px;
+}
+
+
+/*! ------------------------------ Cards ------------------------------ */
+
+#Data .no-news-found img {
+    width: 200px;
+}
+
+#Data .no-news-found h6 {
+    color: var(--main-color-light);
+    letter-spacing: 1px;
+}
+
+/* -------------------------------------- */
+#Data .cards .s-card .item {
+    max-width: 300px;
+    margin: auto;
+    overflow: hidden;
+
+    background: var(--first-bg-color);
+    border: 1px solid var(--main-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+#Data .cards .s-card .item .image {
+    overflow: hidden;
+    height: 200px;
+}
+
+#Data .cards .s-card .item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+#Data .cards .s-card .item:hover .image img {
+    transform: scale(1.1);
+}
+
+#Data .cards .s-card .item .caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-grow: 1;
+}
+
+#Data .cards .s-card .item .caption .details h5 {
+    text-shadow: 1px 1px 2px var(--main-color);
+}
+
+#Data .cards .s-card .item .caption .details p {
+    color: var(--main-color-light);
+}
+
+#Data .cards .s-card .item .caption .link a {
+    background: var(--main-color);
+    color: var(--first-bg-color);
+    border: 0;
+    padding-block: 10px;
+    font-weight: bold;
+    box-shadow: 4px 4px 3px #0b141a71 inset;
+
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+#Data .cards .s-card .item .caption .link a:hover {
+    letter-spacing: 3px;
+}
+
+/*! ------------------------------ pagination ------------------------------ */
+#Data .navigation {
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+/* fallback for scrollbar-width: none; */
+#Data .navigation::-webkit-scrollbar {
+    width: 0px;
+}
+
+#Data .navigation .pagination {
+    width: max-content;
+    margin-inline: auto;
+}
+
+#Data .navigation .pagination .page-item .page-link {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--main-color);
+    font-weight: 500;
+    background: var(--first-bg-color);
+    box-shadow: 2px 2px 4px var(--main-color) inset;
+    border-color: var(--main-color);
+
+    cursor: pointer;
+}
+
+#Data .navigation .pagination .page-item.active .page-link {
+    color: var(--first-bg-color);
+    background: var(--main-color);
+    box-shadow: 2px 2px 4px var(--first-bg-color) inset;
+}
+
+#Data .navigation .pagination .page-item:not(:first-child, :last-child) .page-link {
+    width: 40px;
+}
+
+#Data .navigation .pagination .page-item:first-child .page-link,
+#Data .navigation .pagination .page-item:last-child .page-link {
+    width: 100px;
+    border-radius: 10px;
+}
+
+#Data .navigation .pagination .page-item:first-child.disabled .page-link,
+#Data .navigation .pagination .page-item:last-child.disabled .page-link {
+    box-shadow: none;
+    color: #7e7c7c;
+    border-color: transparent;
+}
+
+
+/*! ------------------------------ Popup lock-page ------------------------------ */
+
+.popup[popup-name="lock-page"],
+.popup[popup-name="load-news"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    background: var(--linear-gradient);
+
+    display: none;
+}
+
+.popup[popup-name="lock-page"] {
+    z-index: 20;
+}
+
+.popup[popup-name="lock-page"] .title h2 {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.popup[popup-name="lock-page"] .box img {
+    max-width: 150px;
+}
+
+.popup[popup-name="lock-page"] .box p {
+    font-size: 20px;
+    color: var(--main-color-light);
+}
+
+
+#Data .rate-limited {
+    color: var(--main-color-light);
+    border: 1px solid var(--main-color-alpha);
+    line-height: 35px;
+    width: fit-content;
+    margin: auto;
+    padding: 20px 40px;
+    font-size: 20px;
+}
+
+/*! ------------------------------ Popup load-news ------------------------------ */
+
+.popup[popup-name="load-news"] {
+    background: var(--linear-gradient);
+}
+
+.popup[popup-name="load-news"] .box span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--main-color);
+
+    animation: loading 0.5s infinite;
+}
+
+.popup[popup-name="load-news"] .box span:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.popup[popup-name="load-news"] .box span:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+.popup[popup-name="load-news"] .box span:nth-of-type(4) {
+    animation-delay: 0.3s;
+}
