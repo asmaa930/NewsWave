@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <title>News Wave</title>
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
 
+    <!-- styles -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/keyframes.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/responsive.index.css">
 
-
+    <!-- scripts -->
     <script src="js/bootstrap.js" defer></script>
     <script src="js/jQuery.js" defer></script>
     <script src="js/functions.js" defer></script>
@@ -89,6 +89,22 @@
                 <img src="images/lock-page.gif" class="img-fluid mb-4" alt="No News">
                 <p class="rate-limited text-center">You've reached the request limit. <br class="d-md-none"> Please try
                     again later.</p>
+            </div>
+        </div>
+    </div>
+    <!--! ------------------------------------------------------------------------------------------- -->
+
+    <div class="popup py-5" popup-name="fail-request">
+
+        <div class="title text-center">
+            <h2 class="main-color">News Wave</h2>
+        </div>
+
+        <div class="box h-100 text-center d-flex align-items-center justify-content-center">
+            <div>
+                <img src="images/no-news.jpg" class="img-fluid mb-4" alt="No News">
+                <p class="rate-limited text-center">Failed to load news. <br class="d-md-none">
+                Please check your connection and try again.</p>
             </div>
         </div>
     </div>

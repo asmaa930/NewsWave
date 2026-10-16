@@ -9,7 +9,7 @@ async function getData(category = 'business', search = '', page = 1) {
         category: category,
         q: search,
         page: page,
-        pageSize: 9,
+        pageSize: NEWS_NUMBER,
         from: formattedDate,
         sortBy: 'publishedAt',
 
@@ -18,17 +18,25 @@ async function getData(category = 'business', search = '', page = 1) {
 
     openPopup('load-news');
 
-    let response = await fetch(`https://newsapi.org/v2/top-headlines?${parameters.toString()}`, {
-        headers: {
-            'X-Api-Key': '055aa829a040417e8a8583fe9f5a5a36'
-        }
-    });
+    let response;
+
+    try {
+        response = await fetch(`https://newsapi.org/v2/top-headlines?${parameters.toString()}`, {
+            headers: {
+                'X-Api-Key': 'f8ade926474c4e0bac0da3d3eefd885d'
+            }
+        });
+        
+    }
+    catch (error) {
+        openPopup('fail-request');
+        return;
+    }
 
     if (!response.ok) {
         openPopup('lock-page');
         return;
     }
-
 
     let data = await response.json();
 
@@ -80,7 +88,7 @@ function preparePagination(currentPage, totalPages) {
 //! _________________________________________________
 
 function showData(data, currentPage) {
-    let numOfPages = Math.ceil(data.totalResults / 9),
+    let numOfPages = Math.ceil(data.totalResults / NEWS_NUMBER),
         news = data.articles,
         $dataContainer = $('#Data .row');
 
@@ -108,7 +116,6 @@ function showData(data, currentPage) {
         `);
 
         $('nav .pagination').html('');
-
     }
 
 }
